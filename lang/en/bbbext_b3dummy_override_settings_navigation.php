@@ -26,3 +26,4 @@
 defined('MOODLE_INTERNAL') || die();
 
 $string['pluginname'] = 'BigBlueButton B3Dummy for Override Settings Navigation';
+$string['b3dummy_override_settings_navigation'] = 'Dummy Override Navigation';
