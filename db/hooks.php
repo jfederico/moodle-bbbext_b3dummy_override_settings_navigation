@@ -15,15 +15,18 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Language File.
+ * Hook callbacks for BigBlueButton B3Dummy for Append Settings Navigation
  *
  * @package   bbbext_b3dummy_override_settings_navigation
- * @copyright 2025 onwards, Blindside Networks Inc
+ * @copyright 2025 Blindside Networks Inc
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
- * @author    Jesus Federico  (jesus [at] blindsidenetworks [dt] com)
  */
 
 defined('MOODLE_INTERNAL') || die();
 
-$string['pluginname'] = 'BigBlueButton B3Dummy for Override Settings Navigation';
-$string['b3dummy_override_settings_navigation'] = 'Dummy Override Navigation';
+$callbacks = [
+    [
+        'hook' => \mod_bigbluebuttonbn\hook\extend_settings_navigation_override::class,
+        'callback' => \bbbext_b3dummy_override_settings_navigation\hook\extend_settings_navigation_override::class . '::override_settings_navigation'
+    ],
+];
